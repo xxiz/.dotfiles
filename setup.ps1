@@ -15,6 +15,7 @@ scoop install git
 Write-Host "cloning repository"
 git clone https://github.com/xxiz/.dotfiles
 Set-Location .dotfiles
+Copy-Item .gitconfig ~
 
 Write-Host "installing scoop apps"
 $apps = Get-Content windows\scoop_apps
