@@ -17,3 +17,16 @@ These configuration files let me rice, and customize my operating system to my p
 - **File Managers**
   - [Dolphin](https://apps.kde.org/dolphin/)
   - [File Explorer](https://en.wikipedia.org/wiki/File_Explorer)
+
+## Installation (Windows)
+## Prerequisites
+- [pwsh](https://apps.microsoft.com/store/detail/powershell/9MZ1SNWT0N5D)
+- [Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701)
+
+## Installation
+Run the installation script through pwsh by
+```pwsh
+irm "raw.githubusercontent.com/xxiz/.dotfiles/main/setup.ps1" | iex
+```
+> Note: If this is your first time running a remote script you have to update your execution policy by running<br>
+> `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser`
