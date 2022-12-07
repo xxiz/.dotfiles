@@ -5,10 +5,15 @@ oh-my-posh init pwsh --config $env:POSH_THEMES_PATH/bubbles.mod.omp.json | Invok
 $env:PYTHONIOENCODING="utf-8"   # fix encoding issue (thefuck)
 Invoke-Expression "$(thefuck --alias)"  # auto correct engine for invalid commands
 
+# add to path
+$env:Path += ";C:\Program Files\Neovim\bin"
+
 # configure modules
 Set-PSReadLineOption -PredictionSource HistoryAndPlugin
 Set-PSReadLineOption -HistoryNoDuplicates
 Set-PSReadLineOption -PredictionViewStyle ListView
+
+$env:Path += ";SomeRandomPath"
 
 # open editors in current directory
 function codeCurr {code.cmd .}
@@ -17,17 +22,17 @@ function mpvCurr {mpv .	}
 function expCurr{explorer .}
 
 # media download helpers 
-function ddrama {bash $HOME/dra-cla -dq 1080p -p $pwd}
-function danime {ani-cli -dq 1080p -p $pwd}
+# function ddrama {bash $HOME/dra-cla -dq 1080p -p $pwd}
+# function danime {ani-cli -dq 720p -p $pwd}
 
 Set-Alias c. codeCurr
 Set-Alias v. vimCurr
 Set-Alias m. mpvCurr
 Set-Alias e. expCurr
-Set-Alias kdrama ddrama
+# Set-Alias kdrama ddrama
 Set-Alias g git
 Set-Alias l ls
-Set-Alias anime danime
+# Set-Alias anime danime
 
 # neofetch clone (minimal)
 $cimSession = New-CimSession
