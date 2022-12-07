@@ -10,8 +10,6 @@ Set-PSReadLineOption -PredictionSource HistoryAndPlugin
 Set-PSReadLineOption -HistoryNoDuplicates
 Set-PSReadLineOption -PredictionViewStyle ListView
 
-$env:Path += ";SomeRandomPath"
-
 # open editors in current directory
 function codeCurr {code.cmd .}
 function vimCurr {vim .	}
