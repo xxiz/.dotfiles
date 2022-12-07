@@ -24,6 +24,8 @@ foreach ($app in $apps) {
     scoop install $app
 }
 
+Copy-Item windows\bubbles.mod.omp.json $env:POSH_THEMES_PATH\bubbles.mod.omp.json
+
 Write-Host "installing powershell modules"
 $modules = Get-Content windows\ps_modules
 foreach ($module in $modules) {

@@ -1,7 +1,7 @@
 # initalize modules
 Import-Module PSReadLine    # auto complete engine
 Import-Module Terminal-Icons # icons for the terminal
-oh-my-posh init pwsh --config $env:POSH_THEMES_PATH/bubblesextra.omp.json | Invoke-Expression  # terminal prompt customization
+oh-my-posh init pwsh --config $env:POSH_THEMES_PATH/bubbles.mod.omp.json | Invoke-Expression  # terminal prompt customization
 $env:PYTHONIOENCODING="utf-8"   # fix encoding issue (thefuck)
 Invoke-Expression "$(thefuck --alias)"  # auto correct engine for invalid commands
 
