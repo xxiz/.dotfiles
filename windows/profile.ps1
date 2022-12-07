@@ -5,9 +5,6 @@ oh-my-posh init pwsh --config $env:POSH_THEMES_PATH/bubbles.mod.omp.json | Invok
 $env:PYTHONIOENCODING="utf-8"   # fix encoding issue (thefuck)
 Invoke-Expression "$(thefuck --alias)"  # auto correct engine for invalid commands
 
-# add to path
-$env:Path += ";C:\Program Files\Neovim\bin"
-
 # configure modules
 Set-PSReadLineOption -PredictionSource HistoryAndPlugin
 Set-PSReadLineOption -HistoryNoDuplicates
